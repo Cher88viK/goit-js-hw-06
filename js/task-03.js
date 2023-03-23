@@ -12,9 +12,20 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+const gallery = document.querySelector('.gallery');
 
-var imageGallery = document.createElement('ul');
-
-images.forEach((image) => {
-  var li = document.createElement('li')
-})
+const galleryMarkup = images
+  .map(
+    ({ url, alt }) =>
+      `<li><img src="${url}" alt="${alt}" width = "400" height = "auto"></li>`
+  )
+  .join('');
+gallery.insertAdjacentHTML('beforeend', galleryMarkup);
+console.log(galleryMarkup)
+//Styling
+gallery.style.display = "flex";
+gallery.style.justifyContent = "center";
+gallery.style.gap = "30px";
+gallery.style.alignItems = "center"
+gallery.style.listStyle = "none"
+//Styling

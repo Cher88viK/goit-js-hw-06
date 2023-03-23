@@ -10,13 +10,13 @@ const ingredients = [
 const ul = document.createElement('ul');
 
 ingredients.forEach((ingredient) => {
-  var li = document.createElement('li');
-  li.innerText = ingredient;
+  let li = document.createElement('li');
+  li.textContent = ingredient;
   li.setAttribute('class', 'item')
   ul.appendChild(li);
 });
 
-var ingredientsList = document.getElementById('ingredients')
+let ingredientsList = document.getElementById('ingredients')
 console.log(ingredientsList);
 ingredientsList.innerHTML = ul.innerHTML;
 console.log(ul);
